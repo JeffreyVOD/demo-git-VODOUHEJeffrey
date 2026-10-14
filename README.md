@@ -9,3 +9,5 @@ README.md          ce fichier
 pom.xml            un descripteur Maven minimal
 src/App.java       une classe avec un main
 ```
+
+Ligne ajoutée
