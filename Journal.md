@@ -299,3 +299,14 @@ Cette association est mémorisée par Git. Il n'est donc pas nécessaire de rép
 **Observation :** Le nouveau commit a été récupéré et apparaît dans l'historique sous la référence `origin/main`. Cependant, ma branche locale `main` n'a pas été modifiée.
 
 **Conclusion :** `git fetch` récupère les nouveaux commits du dépôt distant et actualise les références distantes locales, sans intégrer ces modifications dans la branche de travail. À l'inverse, `git pull` effectue une récupération suivie d'une intégration dans la branche locale.
+
+
+
+$ git push
+To https://github.com/JeffreyVOD/demo-git-VODOUHEJeffrey.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/JeffreyVOD/demo-git-VODOUHEJeffrey.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.

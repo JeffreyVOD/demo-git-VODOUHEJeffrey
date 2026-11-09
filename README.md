@@ -10,4 +10,4 @@ pom.xml            un descripteur Maven minimal
 src/App.java       une classe avec un main
 ```
 
-```Ajouter une ligne (Test avec B)```
+```Ajouter une ligne (Test avec B & A)```
