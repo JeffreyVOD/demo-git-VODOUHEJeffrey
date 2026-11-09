@@ -265,14 +265,7 @@ Sortie de `git lg` :
 - L'historique garde la trace du commit fautif « Ajoute build/sortie.bin » (`9d2e4b7`) : `git rm --cached` arrête le suivi à partir de maintenant, il n'efface pas le passé.
 
 
-<<<<<<< HEAD
 Je rajoute maintenant une troisième ligne pour la branche feature-a ???
-=======
-Je rajoute maintenant une troisième ligne pour la branche feature-a !!!
->>>>>>> feature-c
-
-
----
 
 # TP 05 — Git distant avec Github
 
