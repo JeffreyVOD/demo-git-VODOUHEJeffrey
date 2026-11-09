@@ -265,10 +265,37 @@ Sortie de `git lg` :
 - L'historique garde la trace du commit fautif « Ajoute build/sortie.bin » (`9d2e4b7`) : `git rm --cached` arrête le suivi à partir de maintenant, il n'efface pas le passé.
 
 
-
-
 <<<<<<< HEAD
 Je rajoute maintenant une troisième ligne pour la branche feature-a ???
 =======
 Je rajoute maintenant une troisième ligne pour la branche feature-a !!!
 >>>>>>> feature-c
+
+
+---
+
+# TP 05 — Git distant avec Github
+
+### Compréhension de `origin/main` et de l'option `-u`
+
+La commande `git remote -v` permet d'afficher les dépôts distants configurés ainsi que leurs adresses de récupération (*fetch*) et d'envoi (*push*).
+
+La commande `git branch -vv` affiche les branches locales et leurs relations de suivi avec les branches distantes.
+
+`origin/main` désigne la branche de suivi distant correspondant à la branche `main` du dépôt distant nommé `origin` (généralement le dépôt GitHub). Elle représente la dernière position connue localement de cette branche distante.
+
+L'option `-u` (`--set-upstream`), utilisée avec `git push -u origin main`, permet de définir la branche distante `origin/main` comme branche de suivi de la branche locale `main`.
+
+Cette association est mémorisée par Git. Il n'est donc pas nécessaire de répéter `-u` à chaque envoi : les commandes `git push` et `git pull` peuvent ensuite être utilisées directement.
+
+
+09/11/2026 - 15:44 :  git pull permettra de récupérer les chagements distants et mettra à jour le dépôt local en fast-forward car aucun changement n'a été effectué ici
+
+
+### Expérience Git Fetch
+
+**Manipulation :** J'ai effectué une seconde modification directement sur GitHub, puis j'ai exécuté `git fetch` depuis mon terminal.
+
+**Observation :** Le nouveau commit a été récupéré et apparaît dans l'historique sous la référence `origin/main`. Cependant, ma branche locale `main` n'a pas été modifiée.
+
+**Conclusion :** `git fetch` récupère les nouveaux commits du dépôt distant et actualise les références distantes locales, sans intégrer ces modifications dans la branche de travail. À l'inverse, `git pull` effectue une récupération suivie d'une intégration dans la branche locale.
